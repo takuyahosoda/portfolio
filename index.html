@@ -4,236 +4,271 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sneakers</title>
-  <link rel="shortcut icon" href="imges/favicon.ico">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  <title>portfolio</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="/js/swiper-bundle.min.js" defer></script>
+  <link rel="stylesheet" href="plugin/swiper/swiper-bundle-8.3.1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rakkas&family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
+  <!-- JS -->
+  <script src="plugin/swiper/swiper-bundle-8.3.1.js" defer></script>
   <script src="js/script.js" defer></script>
 </head>
-<body>
-  <header id="header" class="ly_header">
-    <div class="ly_header_inner">
-      <h1 class="bl_hrader_ttl"><a href="#"><img src="imges/logo.svg" alt="logo"></a></h1>
-
-      <button type="button" id="js-buttonHamburger" class="el_hamburger_button" aria-controls="global-nav" aria-expanded="false">
-        <span class="bl_hamburger_line"></span>
-      </button>
-
-      <div class="bl_nav_wrap">
-        <nav class="bl_nav_inner">
-          <ul class="bl_nav_list">
-            <li class="bl_nav_item"><a href="#pickUp">PICK UP</a></li>
-            <li class="bl_nav_item"><a href="#feature">FEATURE</a></li>
-            <li class="bl_nav_item"><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
-
-        <ul class="bl_sns_list">
-          <li class="bl_sns_item"><a href="https://twitter.com/home" target="_blank">Twitter</a></li>
-          <li class="bl_sns_item"><a href="https://www.facebook.com/" target="_blank">facebook</a></li>
-          <li class="bl_sns_item"><a href="https://www.instagram.com/" target="_blank">instagram</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="js_mask"></div>
-  </header>
+<body id="body">
+  <div id="js_animation" class="bl_animation">
+    <span class="bl_animation_txt">PORTFOLIO</span>
+    <span class="bl_animation_txt">TAKUYA HOSODA</span>
+  </div>
 
   <main id="main" class="ly_main">
-    <div class="bl_mv">
-      <video src="imges/video.mp4" loop autoplay muted playsinline></video>
-    </div>
-    <article class="ly_wrap">
-      <!-- pick-up -->
-      <section id="pickUp" class="ly_content ly_content__wide">
-        <h2 class="el_content_headhing">PICK UP</h2>
+    <header class="ly_header" style="background-image: url(images/main_visual.webp);">
+      <div class="bl_header_inner">
+        <h1 class="bl_heading"><span>PORTFOLIO</span>TAKUYA HOSODA</h1>
+      </div>
 
-        <!-- スライダーのコンテナ -->
-        <div class="swiper">
-          <!-- 必要に応じたwrapper -->
-          <div class="swiper-wrapper bl_pickUp_list">
-            <!-- スライド -->
-            <div class="swiper-slide bl_pickUp_item" style="background-image: url(imges/pickup1.jpg);"></div>
-            <div class="swiper-slide bl_pickUp_item" style="background-image: url(imges/pickup1.jpg);"></div>
-            <div class="swiper-slide bl_pickUp_item" style="background-image: url(imges/pickup1.jpg);"></div>
-            <div class="swiper-slide bl_pickUp_item" style="background-image: url(imges/pickup1.jpg);"></div>
-            <div class="swiper-slide bl_pickUp_item" style="background-image: url(imges/pickup1.jpg);"></div>
-            <div class="swiper-slide bl_pickUp_item" style="background-image: url(imges/pickup1.jpg);"></div>
-            <div class="swiper-slide bl_pickUp_item" style="background-image: url(imges/pickup1.jpg);"></div>
-            <div class="swiper-slide bl_pickUp_item" style="background-image: url(imges/pickup1.jpg);"></div>
-            <div class="swiper-slide bl_pickUp_item" style="background-image: url(imges/pickup1.jpg);"></div>
-          </div>
-        </div>
-      </section>
-      <!-- /pick-up -->
-
-      <!-- feature -->
-      <section id="feature" class="ly_content">
-        <h2 class="el_content_headhing">FEATURE</h2>
-
-        <ul class="bl_feature_card col_three">
-          <!-- 1 -->
-          <li class="bl_feature_item">
-            <figure class="bl_feature_body">
-              <div class="bl_feature_head"><img src="imges/pickup1.jpg"  alt=""></div>
-
-              <div class="bl_feature_foot">
-                <h3 class="bl_feature_ttl">category</h3>
-                <p class="bl_feature_txt">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                <p class="bl_feature_time"><time datetime="0000:00:00">XXXX.XX.XX</time></p>
-              </div>
-            </figure>
-          </li>
-          <!-- 2 -->
-          <li class="bl_feature_item">
-            <figure class="bl_feature_body">
-              <div class="bl_feature_head"><img src="imges/pickup2.jpg" alt=""></div>
-
-              <div class="bl_feature_foot">
-                <h3 class="bl_feature_ttl">category</h3>
-                <p class="bl_feature_txt">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                <p class="bl_feature_time"><time datetime="0000:00:00">XXXX.XX.XX</time></p>
-              </div>
-            </figure>
-          </li>
-          <!-- 3 -->
-          <li class="bl_feature_item">
-            <figure class="bl_feature_body">
-              <div class="bl_feature_head"><img src="imges/pickup3.jpg" alt=""></div>
-
-              <div class="bl_feature_foot">
-                <h3 class="bl_feature_ttl">category</h3>
-                <p class="bl_feature_txt">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                <p class="bl_feature_time"><time datetime="0000:00:00">XXXX.XX.XX</time></p>
-              </div>
-            </figure>
-          </li>
-          <!-- 4 -->
-          <li class="bl_feature_item">
-            <figure class="bl_feature_body">
-              <div class="bl_feature_head"><img src="imges/pickup4.jpg" alt=""></div>
-
-              <div class="bl_feature_foot">
-                <h3 class="bl_feature_ttl">category</h3>
-                <p class="bl_feature_txt">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                <p class="bl_feature_time"><time datetime="0000:00:00">XXXX.XX.XX</time></p>
-              </div>
-            </figure>
-          </li>
-          <!-- 5 -->
-          <li class="bl_feature_item">
-            <figure class="bl_feature_body">
-              <div class="bl_feature_head"><img src="imges/pickup5.jpg" alt=""></div>
-
-              <div class="bl_feature_foot">
-                <h3 class="bl_feature_ttl">category</h3>
-                <p class="bl_feature_txt">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                <p class="bl_feature_time"><time datetime="0000:00:00">XXXX.XX.XX</time></p>
-              </div>
-            </figure>
-          </li>
-          <!-- 6 -->
-          <li class="bl_feature_item">
-            <figure class="bl_feature_body">
-              <div class="bl_feature_head"><img src="imges/pickup6.jpg" alt=""></div>
-
-              <div class="bl_feature_foot">
-                <h3 class="bl_feature_ttl">category</h3>
-                <p class="bl_feature_txt">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                <p class="bl_feature_time"><time datetime="0000:00:00">XXXX.XX.XX</time></p>
-              </div>
-            </figure>
-          </li>
-          <!-- 7 -->
-          <li class="bl_feature_item">
-            <figure class="bl_feature_body">
-              <div class="bl_feature_head"><img src="imges/pickup7.jpg" alt=""></div>
-
-              <div class="bl_feature_foot">
-                <h3 class="bl_feature_ttl">category</h3>
-                <p class="bl_feature_txt">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                <p class="bl_feature_time"><time datetime="0000:00:00">XXXX.XX.XX</time></p>
-              </div>
-            </figure>
-          </li>
-          <!-- 8 -->
-          <li class="bl_feature_item">
-            <figure class="bl_feature_body">
-              <div class="bl_feature_head"><img src="imges/pickup8.jpg" alt=""></div>
-
-              <div class="bl_feature_foot">
-                <h3 class="bl_feature_ttl">category</h3>
-                <p class="bl_feature_txt">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                <p class="bl_feature_time"><time datetime="0000:00:00">XXXX.XX.XX</time></p>
-              </div>
-            </figure>
-          </li>
-          <!-- 9 -->
-          <li class="bl_feature_item">
-            <figure class="bl_feature_body">
-              <div class="bl_feature_head"><img src="imges/pickup9.jpg" alt=""></div>
-
-              <div class="bl_feature_foot">
-                <h3 class="bl_feature_ttl">category</h3>
-                <p class="bl_feature_txt">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                <p class="bl_feature_time"><time datetime="0000:00:00">XXXX.XX.XX</time></p>
-              </div>
-            </figure>
-          </li>
-
+      <nav class="ly_nav">
+        <ul class="bl_nav_list">
+          <li class="bl_nav_item"><a href="#about">ABOUT</a></li>
+          <li class="bl_nav_item"><a href="#skill">SKILL</a></li>
+          <li class="bl_nav_item"><a href="#works">WORKS</a></li>
         </ul>
+      </nav>
 
-      </section>
-      <!-- /feature -->
+      <p class="ly_scroll"><a href="#about">Scroll</a></p>
+    </header>
 
-      <!-- CONTACT -->
-      <section id="contact" class="ly_content hp_bg_black ly_content__wide">
-        <h2 class="el_content_headhing">CONTACT</h2>
+    <section id="about" class="ly_container">
+      <h2 class="bl_section_ttl_wrap">
+        <span class="bl_section_ttl">ABOUT</span>
+        <span class="bl_section_ttl_sub">01</span>
+      </h2>
 
-        <div class="ly_contact_inner">
-          <div class="ly_contact_inner_l">
-            <p class="bl_contact_text">テキストテキストテキスト</p>
-            <p class="bl_contact_text">
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテ
-              キストテキストテキストテキストテキストテキストテキストテキストテキストテキ
-              ストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
-            <p class="bl_contact_text">
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテ
-              キストテキストテキストテキストテキストテキストテキストテキストテキストテキ
-              ストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
-          </div>
-
-          <div class="ly_contact_inner_r">
-            <dl class="bl_contact_body">
-              <div class="bl_contact_group">
-                <dt><label for="name">Name:</label></dt>
-                <dd><input type="text" id="name" name="your-name"></dd>
-              </div>
-
-              <div class="bl_contact_group">
-                <dt><label for="email">Mail:</label></dt>
-                <dd><input type="email" id="email" name="your-email"></dd>
-              </div>
-
-              <div class="bl_contact_group">
-                <dt><label for="message">Message:</label></dt>
-                <dd><textarea id="message" name="your-message"></textarea></dd>
-              </div>
-            </dl>
-            <div class="el_button"><input type="submit" value="SEND"></div>
-          </div>
-
+      <div class="bl_content">
+        <div class="bl_inner">
+          <h3 class="bl_content_ttl">デザインで人をわくわくできるデザイナーに</h3>
+          <p class="bl_content_txt">高校を卒業後製造業にて働いておりました。<br>
+            仕事をしていく中で、自分の将来が想像できずその中で何故かWEBデザインに惹かれ、<br>
+            周りの友人などの影響からふと転職しようと決心しデザインスクールに通いました。<br>
+            挫折しながらもなんとか卒業しWEB関係の仕事につきました。<br>
+            これから私のデザインで見る人にとって少しでもわくわくできるデザイナーになりたいです。
+          </p>
+          <h4 class="bl_content_ttl_sub">DESIGN FOR SMILE.</h4>
         </div>
-      </section>
-      <!-- /CONTACT -->
-    </article>
-  </main>
+      </div>
 
-  <footer class="bl_footer">
-    <small>&copy; Sneakers</small>
-  </footer>
+      <div class="bl_section_img"><img src="images/section_img.webp" alt="about"></div>
+    </section>
+
+    <section id="skill" class="ly_container">
+      <h2 class="bl_section_ttl_wrap">
+        <span class="bl_section_ttl">SKILL</span>
+        <span class="bl_section_ttl_sub">02</span>
+      </h2>
+
+      <div class="bl_content">
+        <div class="bl_inner">
+          <ul class="bl_content_list">
+
+            <li class="bl_content_item">
+              <figure class="">
+                <div class="bl_content_item_img"><img src="images/skill/html.webp" alt="html"></div>
+                <figcaption>
+                  <h3>HTML/CSS</h3>
+                  <div class="bl_star bl_star_three"></div>
+                  <p>レスポンシブを含め、基本的なコーディングは問題ありません。使用エディタはVisualStudioCodeです。 CSSはSASS(SCSS)での実装も複雑なコーディングは出来ませんが、基本的な実装は問題なく出来ます。</p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="bl_content_item">
+              <figure class="">
+                <div class="bl_content_item_img"><img src="images/skill/javascript.webp" alt="javascript"></div>
+                <figcaption>
+                  <h3>JavaScript/Jquery</h3>
+                  <div class="bl_star bl_star_two"></div>
+                  <p>ハンバーガーメニューやアコーディオンパネル等基本的な実装は問題ありません。 複雑な実装でもプラグインなどを使い問題なく実装できます。</p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="bl_content_item">
+              <figure class="">
+                <div class="bl_content_item_img"><img src="images/skill/php.webp" alt="php"></div>
+                <figcaption>
+                  <h3>PHP</h3>
+                  <div class="bl_star bl_star_two"></div>
+                  <p>複雑なコードは書けませんが、共通のヘッダーやフッターなどincludeパーツの実装などは問題なくできます。</p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="bl_content_item">
+              <figure class="">
+                <div class="bl_content_item_img"><img src="images/skill/Illustrator.webp" alt="Illustrator"></div>
+                <figcaption>
+                  <h3>Illustrator</h3>
+                  <div class="bl_star bl_star_two"></div>
+                  <p>基本的な機能は問題なく使えます。主にロゴやイラストデザインを行う際に使用します。</p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="bl_content_item">
+              <figure class="">
+                <div class="bl_content_item_img"><img src="images/skill/Photoshop.webp" alt="Photoshop"></div>
+                <figcaption>
+                  <h3>Photoshop</h3>
+                  <div class="bl_star bl_star_three"></div>
+                  <p>Illustrator同様基本的な機能は問題なく使えます。主に画像加工やバナーデザインを行う際に使います。</p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="bl_content_item">
+              <figure class="">
+                <div class="bl_content_item_img"><img src="images/skill/figma.webp" alt="figma"></div>
+                <figcaption>
+                  <h3>Figma/AdobeXD</h3>
+                  <div class="bl_star bl_star_three"></div>
+                  <p>主にデザインを行う上で一番使うソフトです。Figmaでのデザインが多いですがXDも使用できます。</p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="bl_content_item">
+              <figure class="">
+                <div class="bl_content_item_img"><img src="images/skill/git.webp" alt="git"></div>
+                <figcaption>
+                  <h3>Git/SourceTree</h3>
+                  <div class="bl_star bl_star_three"></div>
+                  <p>基本的な機能は問題なく使えます。 主にGitクライアントであるSourceTreeを使用しています。 Backlogと連結しての使用も問題なく出来ます。</p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="bl_content_item">
+              <figure class="">
+                <div class="bl_content_item_img"><img src="images/skill/wordpress.webp" alt="wordpress"></div>
+                <figcaption>
+                  <h3>WordPress</h3>
+                  <div class="bl_star bl_star_two"></div>
+                  <p>基本的なカスタムテンプレートを実装も問題なく出来ます。</p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="bl_content_item">
+              <figure class="">
+                <div class="bl_content_item_img"><img src="images/skill/vue.js.webp" alt="vue.js"></div>
+                <figcaption>
+                  <h3>Vue.js(学習中)</h3>
+                  <div class="bl_star"></div>
+                </figcaption>
+              </figure>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="bl_section_img"><img src="images/section_img02.webp" alt="about"></div>
+    </section>
+
+    <section id="works" class="ly_container">
+      <h2 class="bl_section_ttl_wrap">
+        <span class="bl_section_ttl">WORKS</span>
+        <span class="bl_section_ttl_sub">03</span>
+      </h2>
+
+      <div class="bl_content">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <!-- スライド1 -->
+              <div class="swiper-slide">
+                <div class="swiper_img"><img src="images/works/works_oiwai.webp" alt="パセラのお祝いページ"></div>
+
+                <dl class="swiper_body">
+                  <div class="swiper_item">
+                    <dt>サイト名：</dt>
+                    <dd><a href="https://www.pasela.co.jp/oiwai/" target="_blank">カラオケパセラの本人不在の誕生日会</a></dd>
+                  </div>
+
+                  <div class="swiper_item">
+                    <dt>担当：</dt>
+                    <dd>コーディング(レスポンシブ)</dd>
+                  </div>
+
+                  <div class="swiper_item">
+                    <dt>技術：</dt>
+                    <dd>HTML/CSS/JavaScript</dd>
+                  </div>
+
+                  <div class="swiper_item">
+                    <dt>コメント：</dt>
+                    <dd></dd>
+                  </div>
+                </dl>
+              </div>
+              <!-- スライド2 -->
+              <div class="swiper-slide">
+                <div class="swiper_img"><img src="images/works/works_family.webp" alt="パセラのファミリー会ページ"></div>
+
+                <dl class="swiper_body">
+                  <div class="swiper_item">
+                    <dt>サイト名：</dt>
+                    <dd><a href="https://www.pasela.co.jp/event/family/" target="_blank">パセラのファミリー会</a></dd>
+                  </div>
+
+                  <div class="swiper_item">
+                    <dt>担当：</dt>
+                    <dd>コーディング(レスポンシブ)</dd>
+                  </div>
+
+                  <div class="swiper_item">
+                    <dt>技術：</dt>
+                    <dd>HTML/CSS/Jquery</dd>
+                  </div>
+
+                  <div class="swiper_item">
+                    <dt>コメント：</dt>
+                    <dd></dd>
+                  </div>
+                </dl>
+              </div>
+              <!-- スライド3 -->
+              <div class="swiper-slide">
+                <div class="swiper_img"><img src="images/works/works_hanito-cafe.webp" alt="ハニトーカフェ"></div>
+
+                <dl class="swiper_body">
+                  <div class="swiper_item">
+                    <dt>サイト名：</dt>
+                    <dd><a href="https://www.pasela.co.jp/shop/akiba_multi/honeytoastcafe/" target="_blank">ハニトーカフェ</a></dd>
+                  </div>
+
+                  <div class="swiper_item">
+                    <dt>担当：</dt>
+                    <dd>デザイン/コーディング(レスポンシブ)</dd>
+                  </div>
+
+                  <div class="swiper_item">
+                    <dt>技術：</dt>
+                    <dd>HTML/CSS/Jquery</dd>
+                  </div>
+
+                  <div class="swiper_item">
+                    <dt>コメント：</dt>
+                    <dd></dd>
+                  </div>
+                </dl>
+              </div>
+
+            </div>
+          </div>
+      </div>
+      <div class="bl_section_img"><img src="images/section_img03.webp" alt="about"></div>
+    </section>
+
+  </main>
 </body>
 </html>

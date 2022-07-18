@@ -1,0 +1,82 @@
+$pc: 822px; // PC
+$sp: 821px; // スマホ
+$mainFont: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif; //メインフォント
+$ttlFont: 'Raleway', sans-serif;
+$subFont: 'Rakkas', cursive;
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+html {
+  font-feature-settings: "palt";
+  font-size: 62.5%;
+  font-family: $mainFont;
+}
+
+html.loading-delay{
+    visibility: visible;
+}
+
+body {
+  color: #fff;
+  word-wrap : break-word;
+  overflow-wrap : break-word;
+  overflow: hidden;
+  background-color: #111;
+}
+
+body.fixed {
+  overflow: visible;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all .3s;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+dd,
+dt {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans", Meiryo, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (hover: hover) {
+  a:hover {
+    opacity: 0.6;
+    color: inherit;
+  }
+}
+
+@media (hover: none) {
+  a:active {
+    opacity: 0.6;
+  }
+}
