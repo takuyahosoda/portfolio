@@ -7,14 +7,49 @@
   <title>portfolio</title>
   <!-- CSS -->
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="plugin/swiper/swiper-bundle-8.3.1.css">
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rakkas&family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rakkas&family=Raleway:ital,wght@1,800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <!-- JS -->
   <script src="plugin/swiper/swiper-bundle-8.3.1.js" defer></script>
   <script src="js/script.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const animationText = document.querySelectorAll('.bl_animation_txt');
+
+      for (let i = 0; i < animationText.length; i++) {
+        const targetElement = animationText[i];
+        const text = targetElement.textContent;
+        const textArray = [];
+
+        targetElement.textContent = '';
+        for (let i = 0; i < text.split("").length; i++) {
+          if (text.split("")[i] === ' ') {
+            textArray.push(' ')
+          } else {
+            textArray.push('<span class="animation_wrap"><span class="animation_element" style="animation-delay: '+ (i * 0.1) +'s;">' + text.split("")[i] + '</span></span>');
+          }
+        }
+
+        for (let i = 0; i < textArray.length; i++) {
+          targetElement.innerHTML += textArray[i];
+        }
+
+        window.addEventListener('load', function(){
+          setTimeout(showClose, 3000);
+        });
+
+        function showClose() {
+          const animationElement = document.getElementById('js_animation');
+          const body = document.getElementById('body');
+          animationElement.classList.add('close');
+          body.classList.add('fixed');
+        }
+      }
+    });
+  </script>
 </head>
 <body id="body">
   <div id="js_animation" class="bl_animation">
