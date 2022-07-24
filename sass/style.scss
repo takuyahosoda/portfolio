@@ -50,7 +50,11 @@
 
     &_txt {
       display: block;
-      font-size: 80px;
+      font-size: 8rem;
+      @include b.sp {
+        font-size: 3rem;
+        text-align: center;
+      }
 
       .animation_wrap {
         overflow: hidden;
@@ -76,6 +80,59 @@
   }
 }
 
+@keyframes maskAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  30%,
+  70% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes showAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mask {
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation-delay: 2s;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    transform: translateX(-100%);
+    animation-delay: 1s;
+  }
+
+  &.active::before {
+    animation: maskAnimation 1.5s forwards;
+  }
+
+  &.active {
+    animation: showAnimation 2.5s forwards;
+  }
+}
+
 // header
 .ly_header {
   height: 100vh;
@@ -92,14 +149,23 @@
     .bl_heading {
       font-size: 6.4rem;
       font-weight: bold;
-
       text-align: center;
       padding: 30px 40px;
       border: 3px solid #fff;
 
+      @include b.sp {
+        font-size: 3.2rem;
+        width: 90%;
+        max-width: 0 abs($number: 0);
+      }
+
       span {
         font-size: 3.5rem;
         display: block;
+
+        @include b.sp {
+          font-size: 2.4rem;
+        }
       }
     }
   }
@@ -114,6 +180,10 @@
     max-width: 100%;
     display: grid;
     place-items: center;
+
+    @include b.sp {
+      width: 100%;
+    }
 
     .bl_nav_list {
       display: flex;
@@ -173,6 +243,26 @@
   position: relative;
   padding-top: 140px;
   margin-bottom: 140px;
+  opacity: 0;
+  transition: all .3s ease;
+
+  &:nth-child(odd) {
+    transform: translateX(-50px);
+  }
+
+  &:nth-child(even) {
+    transform: translateX(50px);
+  }
+
+  &.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @include b.sp {
+    margin-bottom: 70px;
+    padding-top: 70px;
+  }
 
   &:nth-child(odd) .bl_section_ttl_wrap {
     right: 0;
@@ -219,14 +309,15 @@
     padding-bottom: 300px;
     position: absolute;
 
+    @include b.sp {
+      font-size: 2.4rem;
+      padding-bottom: 120px;
+      width: 80vw;
+    }
+
     .bl_section_ttl {
       position: relative;
       display: inline-block;
-    }
-
-    &:nth-child(odd) .bl_section_ttl_sub {
-      text-align: right;
-      margin-right: 3vw;
     }
 
     .bl_section_ttl_sub {
@@ -235,10 +326,26 @@
     }
   }
 
+  &:nth-child(odd) .bl_section_ttl_sub {
+    text-align: left;
+    margin-left: 3vw;
+  }
+
+  &:nth-child(even) .bl_section_ttl_sub {
+    text-align: right;
+    margin-right: 3vw;
+  }
+
   .bl_section_img {
     position: absolute;
     top: 400px;
     width: 400px;
+    max-width: 100%;
+
+    @include b.sp {
+      width: 150px;
+      top: 170px;
+    }
   }
 
   &:nth-child(even) .bl_section_img {
@@ -254,6 +361,9 @@
     width: 80vw;
     z-index: -1;
     margin-top: 160px;
+    @include b.sp {
+      margin-top: 200px;
+    }
 
     .bl_inner {
       width: 50vw;
@@ -262,6 +372,10 @@
       .bl_content_ttl {
         font-size: 3.2rem;
         margin-bottom: 40px;
+
+        @include b.sp {
+          font-size: 2rem;
+        }
       }
 
       .bl_content_txt {
@@ -272,6 +386,10 @@
       .bl_content_ttl_sub {
         font-size: 2.8rem;
         text-align: right;
+
+        @include b.sp {
+          font-size: 1.8rem;
+        }
       }
     }
   }
@@ -282,12 +400,20 @@
     .bl_inner {
       margin-left: auto;
       margin-right: 5vw;
+
+      @include b.sp {
+        margin: 0 auto;
+      }
     }
   }
 
   &:nth-child(odd) .bl_content {
     .bl_inner {
       margin-left: 5vw;
+
+      @include b.sp {
+        margin: 0 auto;
+      }
     }
   }
 
@@ -296,12 +422,25 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
 
+    @include b.sp {
+      display: block;
+
+      .bl_content_item:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
     .bl_content_item > figure {
       display: flex;
 
       .bl_content_item_img {
         width: 60px;
         height: 60px;
+
+        @include b.sp {
+          width: 40px;
+          height: 40px;
+        }
       }
 
       figcaption  {
@@ -310,6 +449,10 @@
 
         h3 {
           font-size: 3.2rem;
+
+          @include b.sp {
+            font-size: 2rem;
+          }
         }
 
         .bl_star::before{
@@ -325,22 +468,63 @@
 // スライド
 .swiper {
   width: 680px;
+  max-width: 100%;
   padding-top: 70px;
   padding-bottom: 70px;
   margin-right: 5vw;
+
+  @include b.sp {
+    padding-top: 100px;
+  }
+}
+
+.swiper_img > img {
+  opacity: 0.3;
+  transition: .3s all;
 }
 
 .swiper_body {
   margin-top: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s all;
+}
+
+.swiper-slide-active {
+  .swiper_img > img {
+    opacity: 1;
+  }
+
+  .swiper_body {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .swiper_item {
   display: flex;
 
+  @include b.sp {
+    display: block;
+  }
+
   dt {
     margin-right: 10px;
     width: 20%;
     text-align: right;
+
+    &::after {
+      content:'：';
+
+      @include b.sp {
+        content: none;
+      }
+    }
+
+    @include b.sp {
+      width: 100%;
+      text-align: left;
+    }
   }
 
   a {
@@ -356,6 +540,10 @@
 .swiper-pagination-fraction {
   top: 30px;
   bottom: auto;
+
+  @include b.sp {
+    top: 60px;
+  }
 }
 
 .swiper-button-next {
@@ -368,6 +556,11 @@
   width: 44px;
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: none;
+}
+
 .bl_inner_footer {
   text-align: center;
   background-color: #F7F7F7;
@@ -375,6 +568,10 @@
   font-size: 4.8rem;
   line-height: 1.2;
   padding: 60px 0;
+
+  @include b.sp {
+    font-size: 3.2rem;
+  }
 }
 
 .bl_small {
@@ -400,6 +597,11 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);
+
+  @include b.sp {
+    width: 60px;
+    height: 60px;
+  }
 
   &.show {
     opacity: 1;

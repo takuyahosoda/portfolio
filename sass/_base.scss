@@ -55,6 +55,10 @@ dt {
   line-height: 1.6;
   font-size: 1.6rem;
   font-family: $mainFont;
+
+  @include sp {
+    font-size: 1.4rem;
+  }
 }
 
 li {
