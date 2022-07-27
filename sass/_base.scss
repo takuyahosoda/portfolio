@@ -31,6 +31,7 @@ body {
   overflow-wrap : break-word;
   overflow: hidden;
   background-color: #111;
+  letter-spacing: 1px;
 }
 
 body.fixed {
@@ -69,4 +70,8 @@ li {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  letter-spacing: 2px;
 }

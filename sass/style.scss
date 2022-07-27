@@ -1,5 +1,4 @@
 @use 'base' as b;
-
 @keyframes showTop {
   0% {
     transform: translateY(-100%);
@@ -91,7 +90,7 @@
   }
 
   100% {
-    transform: translateX(100%);
+    transform: translateX(110%);
   }
 }
 
@@ -193,6 +192,11 @@
         font-size: 1.2rem;
         display: flex;
         align-items: center;
+
+        a:hover {
+          opacity: 1;
+          color: #fff;
+        }
 
         &:not(:last-child) {
           margin-right: 10px;
@@ -455,10 +459,45 @@
           }
         }
 
-        .bl_star::before{
-          content: "";
-          display: block;
+        p {
+          text-align: justify;
+          letter-spacing: 1.5px;
+        }
+
+        .bl_star {
+          position: relative;
+          margin-top: 5px;
+          margin-bottom: 16px;
           height: 20px;
+
+          span::before,
+          span::after {
+            display: block;
+            height: 20px;
+            font-size: 20px;
+            position: absolute;
+          }
+
+          span::before{
+            content: "☆☆☆☆☆";
+            z-index: 1;
+          }
+
+          span::after {
+            z-index: 2;
+          }
+
+          &.bl_star_one > span::after {
+            content: "★";
+          }
+
+          &.bl_star_two > span::after {
+            content: "★★";
+          }
+
+          &.bl_star_three > span::after {
+            content: "★★★";
+          }
         }
       }
     }

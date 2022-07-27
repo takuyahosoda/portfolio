@@ -1,10 +1,4 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @charset "UTF-8";
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 html {
   font-feature-settings: "palt";
   font-size: 62.5%;
@@ -21,6 +15,7 @@ body {
   overflow-wrap: break-word;
   overflow: hidden;
   background-color: #111;
+  letter-spacing: 1px;
 }
 
 body.fixed {
@@ -46,8 +41,6 @@ dt {
   font-size: 1.6rem;
   font-family: "Raleway", sans-serif;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   p,
 dd,
@@ -55,10 +48,6 @@ dt {
     font-size: 1.4rem;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 li {
   list-style: none;
@@ -68,6 +57,10 @@ li {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 2px;
 }
 
 @keyframes showTop {
@@ -116,8 +109,6 @@ li {
 }
 .bl_animation_txt {
   display: block;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   font-size: 8rem;
 }
 @media (max-width: 821px) {
@@ -125,12 +116,6 @@ li {
     font-size: 3rem;
     text-align: center;
   }
-=======
-  font-size: 80px;
->>>>>>> Stashed changes
-=======
-  font-size: 80px;
->>>>>>> Stashed changes
 }
 .bl_animation_txt .animation_wrap {
   overflow: hidden;
@@ -150,8 +135,6 @@ li {
   display: none;
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @keyframes maskAnimation {
   0% {
     transform: translateX(-100%);
@@ -160,7 +143,7 @@ li {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(110%);
   }
 }
 @keyframes showAnimation {
@@ -197,10 +180,6 @@ li {
   animation: showAnimation 2.5s forwards;
 }
 
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .ly_header {
   height: 100vh;
   width: 100%;
@@ -220,8 +199,6 @@ li {
   padding: 30px 40px;
   border: 3px solid #fff;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .ly_header .bl_header_inner .bl_heading {
     font-size: 3.2rem;
@@ -229,25 +206,15 @@ li {
     max-width: 0 0;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .ly_header .bl_header_inner .bl_heading span {
   font-size: 3.5rem;
   display: block;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .ly_header .bl_header_inner .bl_heading span {
     font-size: 2.4rem;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .ly_header .ly_nav {
   position: absolute;
   top: 0;
@@ -259,17 +226,11 @@ li {
   display: grid;
   place-items: center;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .ly_header .ly_nav {
     width: 100%;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .ly_header .ly_nav .bl_nav_list {
   display: flex;
   color: #9A9A9A;
@@ -278,6 +239,10 @@ li {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+}
+.ly_header .ly_nav .bl_nav_list .bl_nav_item a:hover {
+  opacity: 1;
+  color: #fff;
 }
 .ly_header .ly_nav .bl_nav_list .bl_nav_item:not(:last-child) {
   margin-right: 10px;
@@ -320,8 +285,6 @@ li {
   position: relative;
   padding-top: 140px;
   margin-bottom: 140px;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -340,10 +303,6 @@ li {
     margin-bottom: 70px;
     padding-top: 70px;
   }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 }
 .ly_container:nth-child(odd) .bl_section_ttl_wrap {
   right: 0;
@@ -386,8 +345,6 @@ li {
   padding-bottom: 300px;
   position: absolute;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .ly_container .bl_section_ttl_wrap {
     font-size: 2.4rem;
@@ -395,33 +352,14 @@ li {
     width: 80vw;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .ly_container .bl_section_ttl_wrap .bl_section_ttl {
   position: relative;
   display: inline-block;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-.ly_container .bl_section_ttl_wrap:nth-child(odd) .bl_section_ttl_sub {
-  text-align: right;
-  margin-right: 3vw;
-}
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .ly_container .bl_section_ttl_wrap .bl_section_ttl_sub {
   display: block;
   font-family: "Rakkas", cursive;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 .ly_container:nth-child(odd) .bl_section_ttl_sub {
   text-align: left;
   margin-left: 3vw;
@@ -430,16 +368,10 @@ li {
   text-align: right;
   margin-right: 3vw;
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .ly_container .bl_section_img {
   position: absolute;
   top: 400px;
   width: 400px;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   max-width: 100%;
 }
 @media (max-width: 821px) {
@@ -447,10 +379,6 @@ li {
     width: 150px;
     top: 170px;
   }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 }
 .ly_container:nth-child(even) .bl_section_img {
   left: 10vw;
@@ -464,17 +392,11 @@ li {
   z-index: -1;
   margin-top: 160px;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .ly_container .bl_content {
     margin-top: 200px;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .ly_container .bl_content .bl_inner {
   width: 50vw;
   padding: 70px 0 74px;
@@ -483,17 +405,11 @@ li {
   font-size: 3.2rem;
   margin-bottom: 40px;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .ly_container .bl_content .bl_inner .bl_content_ttl {
     font-size: 2rem;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .ly_container .bl_content .bl_inner .bl_content_txt {
   line-height: 2;
   margin-bottom: 70px;
@@ -502,17 +418,11 @@ li {
   font-size: 2.8rem;
   text-align: right;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .ly_container .bl_content .bl_inner .bl_content_ttl_sub {
     font-size: 1.8rem;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .ly_container:nth-child(even) .bl_content {
   margin-left: auto;
 }
@@ -520,8 +430,6 @@ li {
   margin-left: auto;
   margin-right: 5vw;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .ly_container:nth-child(even) .bl_content .bl_inner {
     margin: 0 auto;
@@ -535,23 +443,11 @@ li {
     margin: 0 auto;
   }
 }
-=======
-.ly_container:nth-child(odd) .bl_content .bl_inner {
-  margin-left: 5vw;
-}
->>>>>>> Stashed changes
-=======
-.ly_container:nth-child(odd) .bl_content .bl_inner {
-  margin-left: 5vw;
-}
->>>>>>> Stashed changes
 .ly_container .bl_content_list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .ly_container .bl_content_list {
     display: block;
@@ -560,10 +456,6 @@ li {
     margin-bottom: 20px;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .ly_container .bl_content_list .bl_content_item > figure {
   display: flex;
 }
@@ -571,18 +463,12 @@ li {
   width: 60px;
   height: 60px;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .ly_container .bl_content_list .bl_content_item > figure .bl_content_item_img {
     width: 40px;
     height: 40px;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .ly_container .bl_content_list .bl_content_item > figure figcaption {
   width: 60%;
   margin-left: 20px;
@@ -590,38 +476,52 @@ li {
 .ly_container .bl_content_list .bl_content_item > figure figcaption h3 {
   font-size: 3.2rem;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .ly_container .bl_content_list .bl_content_item > figure figcaption h3 {
     font-size: 2rem;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-.ly_container .bl_content_list .bl_content_item > figure figcaption .bl_star::before {
-  content: "";
+.ly_container .bl_content_list .bl_content_item > figure figcaption p {
+  text-align: justify;
+  letter-spacing: 1.5px;
+}
+.ly_container .bl_content_list .bl_content_item > figure figcaption .bl_star {
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 16px;
+  height: 20px;
+}
+.ly_container .bl_content_list .bl_content_item > figure figcaption .bl_star span::before,
+.ly_container .bl_content_list .bl_content_item > figure figcaption .bl_star span::after {
   display: block;
   height: 20px;
+  font-size: 20px;
+  position: absolute;
+}
+.ly_container .bl_content_list .bl_content_item > figure figcaption .bl_star span::before {
+  content: "☆☆☆☆☆";
+  z-index: 1;
+}
+.ly_container .bl_content_list .bl_content_item > figure figcaption .bl_star span::after {
+  z-index: 2;
+}
+.ly_container .bl_content_list .bl_content_item > figure figcaption .bl_star.bl_star_one > span::after {
+  content: "★";
+}
+.ly_container .bl_content_list .bl_content_item > figure figcaption .bl_star.bl_star_two > span::after {
+  content: "★★";
+}
+.ly_container .bl_content_list .bl_content_item > figure figcaption .bl_star.bl_star_three > span::after {
+  content: "★★★";
 }
 
 .swiper {
   width: 680px;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   max-width: 100%;
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   padding-top: 70px;
   padding-bottom: 70px;
   margin-right: 5vw;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .swiper {
     padding-top: 100px;
@@ -646,39 +546,21 @@ li {
 .swiper-slide-active .swiper_body {
   opacity: 1;
   visibility: visible;
-=======
-
-.swiper_body {
-  margin-top: 30px;
->>>>>>> Stashed changes
-=======
-
-.swiper_body {
-  margin-top: 30px;
->>>>>>> Stashed changes
 }
 
 .swiper_item {
   display: flex;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .swiper_item {
     display: block;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .swiper_item dt {
   margin-right: 10px;
   width: 20%;
   text-align: right;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 .swiper_item dt::after {
   content: "：";
 }
@@ -693,10 +575,6 @@ li {
     text-align: left;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .swiper_item a {
   color: #1CA9E3;
   text-decoration: underline;
@@ -709,17 +587,11 @@ li {
   top: 30px;
   bottom: auto;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .swiper-pagination-fraction {
     top: 60px;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 .swiper-button-next {
   background-image: url(../images/works/swiper_next.svg);
@@ -731,17 +603,11 @@ li {
   width: 44px;
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: none;
 }
 
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .bl_inner_footer {
   text-align: center;
   background-color: #F7F7F7;
@@ -750,17 +616,11 @@ li {
   line-height: 1.2;
   padding: 60px 0;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .bl_inner_footer {
     font-size: 3.2rem;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 .bl_small {
   text-align: center;
@@ -786,18 +646,12 @@ li {
   visibility: hidden;
   transform: translateY(-20px);
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @media (max-width: 821px) {
   .bl_top {
     width: 60px;
     height: 60px;
   }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 .bl_top.show {
   opacity: 1;
   visibility: visible;

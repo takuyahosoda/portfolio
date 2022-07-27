@@ -3,7 +3,7 @@ window.onbeforeunload = function () {
 }
 
 const swiper = new Swiper(".swiper", {
-  slidesPerView: 1.5,
+  slidesPerView: 1,
   centeredSlides: true,
   spaceBetween: 30,
   loop: true,
