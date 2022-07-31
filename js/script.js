@@ -5,6 +5,7 @@ window.onbeforeunload = function () {
 const swiper = new Swiper(".swiper", {
   slidesPerView: 1,
   centeredSlides: true,
+  effect: 'flip',
   spaceBetween: 30,
   loop: true,
   pagination: {
