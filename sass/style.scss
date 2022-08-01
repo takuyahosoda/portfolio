@@ -151,6 +151,9 @@
       text-align: center;
       padding: 30px 40px;
       border: 3px solid #fff;
+      @include b.maxPc {
+        font-size: 8vw;
+      }
 
       @include b.sp {
         font-size: 3.2rem;
@@ -161,6 +164,9 @@
       span {
         font-size: 3.5rem;
         display: block;
+        @include b.maxPc {
+          font-size: 6vw;
+        }
 
         @include b.sp {
           font-size: 2.4rem;
@@ -179,6 +185,9 @@
     max-width: 100%;
     display: grid;
     place-items: center;
+    @include b.maxPc {
+      width: 30%;
+    }
 
     @include b.sp {
       width: 100%;
@@ -192,6 +201,9 @@
         font-size: 1.2rem;
         display: flex;
         align-items: center;
+        @include b.maxPc {
+          font-size: 1vw;
+        }
 
         a:hover {
           opacity: 1;
@@ -210,6 +222,10 @@
           background-color: #9A9A9A;
           transform: rotate(35deg);
           margin-left: 10px;
+
+          @include b.maxPc {
+            height: 1vw;
+          }
         }
       }
     }
@@ -249,6 +265,11 @@
   margin-bottom: 140px;
   opacity: 0;
   transition: all .3s ease;
+  max-width: 2000px;
+  @include b.maxPc {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   &:nth-child(odd) {
     transform: translateX(-50px);
@@ -312,6 +333,9 @@
     padding-top: 60px;
     padding-bottom: 300px;
     position: absolute;
+    @include b.maxPc {
+      width: 30vw;
+    }
 
     @include b.sp {
       font-size: 2.4rem;
@@ -363,6 +387,7 @@
   .bl_content {
     background-color: rgba(51, 51, 51, 0.7);
     width: 80vw;
+    max-width: 100%;
     z-index: -1;
     margin-top: 160px;
     @include b.sp {
@@ -372,6 +397,10 @@
     .bl_inner {
       width: 50vw;
       padding: 70px 0 74px;
+
+      @include b.maxPc {
+        width: 25vw;
+      }
 
       .bl_content_ttl {
         font-size: 3.2rem;
@@ -573,6 +602,20 @@
   a {
     color: #1CA9E3;
     text-decoration: underline;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/works/icon_link.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      margin-left: 8px;
+    }
 
     &:hover {
       color: #1CA9E3;
@@ -688,6 +731,8 @@
     }
   }
 }
+
+
 
 @media (hover: hover) {
   a:hover {

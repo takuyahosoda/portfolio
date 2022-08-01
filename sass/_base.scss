@@ -1,5 +1,6 @@
 $pc: 822px; // PC
 $sp: 821px; // スマホ
+$maxPc: 2000px;
 $mainFont: 'Raleway', sans-serif;
 $subFont: 'Rakkas', cursive;
 
@@ -11,6 +12,12 @@ $subFont: 'Rakkas', cursive;
 
 @mixin sp {
   @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin maxPc {
+  @media (min-width: ($maxPc)) {
     @content;
   }
 }
