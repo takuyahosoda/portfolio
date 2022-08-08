@@ -1,0 +1,81 @@
+/* ------------------ */
+/* base */
+/* ------------------ */
+$pc: 822px; // PC
+$sp: 821px; // スマホ
+$maxPc: 2000px;
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin maxPc {
+  @media (min-width: ($maxPc)) {
+    @content;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color:#141414;
+  font-size:1.4rem;
+  line-height:1.8;
+  letter-spacing: 0.05em;
+  font-family: 'Roboto', sans-serif,'Noto Sans JP', sans-serif;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+img {
+  width:100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color:#fff;
+}
+
+.section-title {
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-bottom: 70px;
+}
+
+li {
+  list-style: none;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height:2;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+  @include sp {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}
+
+.section-wrapper {
+  padding:100px 10% 50px;
+  @include sp {
+    padding:100px 5% 50px;
+  }
+}

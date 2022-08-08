@@ -1,0 +1,140 @@
+@use 'base' as b;
+@use 'header';
+@use 'footer';
+
+/* ------------------ */
+/* fv */
+/* ------------------ */
+.fv{
+  height:90vh;
+  background-image: url(https://drive.google.com/uc?export=view&id=1KiBAmJAbba1BglsHGnlKWEKzj6wCL9kq);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-copy{
+  font-size: 5rem;
+  color: #fff;
+  font-weight: bold;
+  border:2px solid #fff;
+  padding: 34px 42px;
+
+  @include b.sp {
+      font-size: 3rem;
+  }
+}
+
+/* ------------------ */
+/* service */
+/* ------------------ */
+.text-wrapper_service,
+.img-wrapper_service {
+  max-width: 480px;
+  @include b.sp {
+    .img-wrapper_service{
+      margin-top: 40px;
+
+      img {
+        height:150px;
+        object-fit:cover;
+      }
+    }
+  }
+}
+.content-inner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  @include b.sp {
+    flex-direction:column;
+    margin:50px auto;
+  }
+}
+
+.reverse{
+  margin-top: 50px;
+  flex-direction: row-reverse;
+}
+
+/* ------------------ */
+/* news */
+/* ------------------ */
+.card-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include b.sp {
+    flex-direction: column;
+  }
+}
+
+.card-item{
+  max-width: 320px;
+  box-shadow: 0px 0px 6px rgba(27, 19, 16, 0.4);
+  margin-right:10px;
+  @include b.sp {
+    margin: 50px 0 0;
+  }
+}
+
+.card-list li:first-child{
+  margin-top: 0;
+}
+
+.text_news{
+  color:#141414;
+  padding: 33px 25px;
+}
+
+/* ------------------ */
+/* contact */
+/* ------------------ */
+.form {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+input , textarea {
+  border: 1px solid #141414;
+  font-size: 1.4rem;
+  line-height: 2;
+  padding: 10px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.form-part {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+textarea {
+  height: 171px;
+  resize: none;
+}
+
+.form-send {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.form-btn {
+  background-color: #1b1310;
+  border-radius: 30px;
+  box-shadow: 0 0 6px #1b1310;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 20px 97px;
+  text-align: center;
+  width: 235px;
+}
