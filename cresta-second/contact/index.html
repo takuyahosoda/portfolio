@@ -6,8 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cresta Design | お問い合わせ</title>
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700|Noto+Serif:400,700,700i&display=swap&subset=japanese" rel="stylesheet">
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+  <script src="../js/script.js" defer></script>
 </head>
 <body>
   <!-- header -->
@@ -16,10 +18,10 @@
       <h1 class="site-title"><a href="../">Cresta Design</a></h1>
       <nav class="header-nav">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#!">Concept</a></li>
-          <li class="nav-item"><a href="#!">Service</a></li>
-          <li class="nav-item"><a href="#!">Works</a></li>
-          <li class="nav-item"><a href="./">Contact</a></li>
+          <li class="nav-item"><a href="../index.html#concept">Concept</a></li>
+          <li class="nav-item"><a href="../index.html#service">Service</a></li>
+          <li class="nav-item"><a href="../index.html#works">Works</a></li>
+          <li class="nav-item"><a href="#!">Contact</a></li>
         </ul>
       </nav>
       <button class="burger-btn">
@@ -45,18 +47,18 @@
         <li class="form-item">
           <label for="" class="form-label">お問い合わせ内容</label>
           <ul class="checkbox-list">
-          <li class="checkbox-item">
-            <input type="checkbox" class="checkbox" name="contact-type" id="document" checked>
-            <label for="document">資料請求</label>
-          </li>
-          <li class="checkbox-item">
-            <input type="checkbox" class="checkbox" name="contact-type" id="phone">
-            <label for="phone">お電話でのご相談を希望</label>            
-          </li>
-          <li class="checkbox-item">
-            <input type="checkbox" class="checkbox" name="contact-type" id="application">
-            <label for="application">申し込み</label>
-          </li>
+            <li class="checkbox-item">
+              <input type="checkbox" class="checkbox" name="contact-type" id="document" checked>
+              <label for="document">資料請求</label>
+            </li>
+            <li class="checkbox-item">
+              <input type="checkbox" class="checkbox" name="contact-type" id="phone">
+              <label for="phone">お電話でのご相談を希望</label>
+            </li>
+            <li class="checkbox-item">
+              <input type="checkbox" class="checkbox" name="contact-type" id="application">
+              <label for="application">申し込み</label>
+            </li>
           </ul>
         </li class="form-item">
         <li class="form-item">
@@ -79,7 +81,7 @@
       <input type="submit" class="submit-btn" value="Submit">
     </form>
     <!-- //form -->
-    
+
   </main>
   <!-- //main -->
 
@@ -88,16 +90,5 @@
     <small>&copy;cresta.design all rights reserved</small>
   </footer>
   <!-- //footer -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="../js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-

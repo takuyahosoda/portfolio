@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="noindex , nofollow">
   <title>Cresta Design | 快適なオフィスをデザインする会社</title>
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700|Noto+Serif:400,700,700i&display=swap&subset=japanese" rel="stylesheet">
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/slick.css">
-  <link rel="stylesheet" href="./css/slick-theme.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="preload" href="./css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="./css/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="./css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+  <script src="js/slick.min.js" defer></script>
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <!-- header -->
@@ -18,9 +22,9 @@
       <div class="site-title"><a href="./">Cresta Design</a></div>
       <nav class="header-nav">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#!">Concept</a></li>
-          <li class="nav-item"><a href="#!">Service</a></li>
-          <li class="nav-item"><a href="#!">Works</a></li>
+          <li class="nav-item"><a href="#concept">Concept</a></li>
+          <li class="nav-item"><a href="#service">Service</a></li>
+          <li class="nav-item"><a href="#works">Works</a></li>
           <li class="nav-item"><a href="./contact/">Contact</a></li>
         </ul>
       </nav>
@@ -38,9 +42,9 @@
     <!-- fv -->
     <div class="fv">
       <ul class="slider">
-        <li><img src="./img/fv-bgi_01@2x.jpg" alt=""></li>
-        <li><img src="./img/fv-bgi_02@2x.jpg" alt=""></li>
-        <li><img src="./img/fv-bgi_03@2x.jpg" alt=""></li>
+        <li><img src="./images/fv-bgi_01.jpg" alt=""></li>
+        <li><img src="./images/fv-bgi_02.jpg" alt=""></li>
+        <li><img src="./images/fv-bgi_03.jpg" alt=""></li>
       </ul>
       <div class="main-copy">
         <p class="en-copy">Design for Smile.</p>
@@ -50,7 +54,7 @@
     <!-- //fv -->
 
     <!-- concept -->
-    <section class="section-wrapper">
+    <section id="concept" class="section-wrapper">
       <h2 class="section-title">CONCEPT</h2>
       <div class="section-inner">
         <p class="concept-lead">
@@ -62,7 +66,7 @@
             私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta Designだからこそできる空間デザインを提供させていただきます。
           </p>
           <div class="concept-img-wrapper">
-            <img src="./img/concept-image@2x.jpg" alt="モダンなオフィス内の様子。焦げ茶色の木のテーブルに黒い椅子が10脚並んでいる。手前にはうっすらピンク色のソファがあり、広々とした空間が奥に広がっている">
+            <img src="./images/concept-image.jpg" alt="モダンなオフィス内の様子。焦げ茶色の木のテーブルに黒い椅子が10脚並んでいる。手前にはうっすらピンク色のソファがあり、広々とした空間が奥に広がっている">
           </div>
         </div>
       </div>
@@ -71,24 +75,24 @@
     <!-- //concept -->
 
     <!-- //works -->
-    <section class="section-wrapper bg-works">
+    <section id="works" class="section-wrapper bg-works">
       <h2 class="section-title text-right text-white">Works</h2>
       <ul class="works-list">
         <li class="works-item">
           <a href="#!">
-            <div class="works-list-img"><img src="./img/card-img01@2x.jpg" alt=""></div>
+            <div class="works-list-img"><img src="./images/card-img01.jpg" alt=""></div>
             <p class="works-list-text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
           </a>
         </li>
         <li class="works-item">
           <a href="#!">
-            <div class="works-list-img"><img src="./img/card-img02@2x.jpg" alt=""></div>
+            <div class="works-list-img"><img src="./images/card-img02.jpg" alt=""></div>
             <p class="works-list-text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
           </a>
         </li>
         <li class="works-item">
           <a href="#!">
-            <div class="works-list-img"><img src="./img/card-img03@2x.jpg" alt=""></div>
+            <div class="works-list-img"><img src="./images/card-img03.jpg" alt=""></div>
             <p class="works-list-text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
           </a>
         </li>
@@ -99,12 +103,12 @@
     <!-- works -->
 
     <!-- Service -->
-    <section class="section-wrapper">
+    <section id="service" class="section-wrapper">
       <h2 class="section-title">Service</h2>
       <ul class="service-list">
-        <li class="service-item service_1"><a href="#!">Hearing</a></li>
-        <li class="service-item service_2"><a href="#!">Planning</a></li>
-        <li class="service-item service_3"><a href="#!">Direction</a></li>
+        <li class="service-item" style="background-image: url(images/service-img01.jpg);"><a href="#!">Hearing</a></li>
+        <li class="service-item" style="background-image: url(images/service-img02.jpg);"><a href="#!">Planning</a></li>
+        <li class="service-item" style="background-image: url(images/service-img03.jpg);"><a href="#!">Direction</a></li>
       </ul>
       <div class="section-bottom text-right">Our Service</div>
     </section>
@@ -128,16 +132,5 @@
     <small>&copy;cresta.design all rights reserved</small>
   </footer>
   <!-- //footer -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-

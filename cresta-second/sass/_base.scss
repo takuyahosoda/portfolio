@@ -1,0 +1,138 @@
+$pc: 822px; // PC
+$sp: 821px; // スマホ
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  letter-spacing: .05em;
+  font-family: 'Noto Serif', 'Noto Serif JP', serif;
+  color: #171717;
+}
+
+img {
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.section-wrapper {
+  padding: 100px 0 70px;
+  @include sp {
+    padding: 100px 0 40px;
+  }
+}
+
+.section-title {
+  max-width: 1000px;
+  color: #282f35;
+  font-size: 6rem;
+  font-style: italic;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+  @include sp {
+    padding: 0 4vw;
+    font-size: 3rem;
+    margin-bottom: 50px;
+
+    &::after {
+      width: 90px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    background-color: #282f35;
+    width: 200px;
+    height: 5px;
+    margin-left: 30px;
+    vertical-align: middle;
+  }
+
+  &.text-white::after {
+    background-color: #fff;
+  }
+}
+
+.section-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 50px;
+  @include sp {
+    padding: 0 4vw;
+  }
+}
+
+.section-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 9rem;
+  opacity: .05;
+  &.text-white {
+    opacity: .1;
+  }
+
+  @include sp {
+    font-size: 4rem;
+    padding: 0 4vw;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.link-btn {
+  display: block;
+  width: 235px;
+  line-height: 60px;
+  margin: 0 auto 70px;
+  background-color: #f7d43f;
+  box-shadow: 0 0 6px #1b1310;
+  border-radius: 30px;
+  text-align: center;
+  color: #171717;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+
+  &:hover {
+    opacity: .7;
+    transition: .3s;
+  }
+
+  @include sp {
+    margin-bottom: 40px;
+  }
+}
+
+.sp-br {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+
+@include sp {
+  .pc-br {
+    display: none;
+  }
+}

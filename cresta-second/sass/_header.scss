@@ -1,0 +1,146 @@
+@use 'base' as b;
+
+/* ---------------------------- */
+/* header
+/* ---------------------------- */
+.header {
+  padding: 19px 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: 100%;
+  transition: .3s;
+
+  @include b.sp {
+    padding: 30px 4vw 0;
+  }
+
+  &-nav {
+    @include b.sp  {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #282F35;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &.fixed {
+    position: fixed;
+    background-color: #282f35;
+    padding: 30px;
+    width: 100%;
+    transition: .3s;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+    font-weight: bold;
+    font-style: italic;
+
+    &:hover {
+      opacity: .7;
+      transition: .3s;
+    }
+  }
+}
+
+.site-title {
+  font-size: 2.6rem;
+}
+
+.nav-list {
+  display: flex;
+  @include b.sp {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.nav-item {
+  margin-right: 30px;
+  @include b.sp {
+    margin: 0 0 30px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.burger-btn {
+  display: none;
+  @include b.sp {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 4vw;
+
+    .bar {
+      display: block;
+      height: 3px;
+      width: 30px;
+      background-color: #fff;
+    }
+  }
+
+  &.cross .bar_top {
+    transform: rotate(45deg) translate(8px, 8px);
+    transition: .3s;
+  }
+
+  &.cross .bar_mid {
+    opacity: 0;
+    transition: .3s;
+  }
+
+  &.cross .bar_bottom {
+    transform: rotate(-45deg) translate(8px, -8px);
+    transition: .3s;
+  }
+}
+
+
+  /* ---------------------------- */
+  /* header_sp
+  /* ---------------------------- */
+
+@include b.sp {
+  .bar_top {
+    margin-bottom: 8px;
+  }
+
+  .bar_mid {
+    margin-bottom: 8px;
+  }
+
+  body.noscroll {
+    overflow: hidden;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+  }
+}
